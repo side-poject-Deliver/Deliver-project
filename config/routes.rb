@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resource :owner do
+    resources :shops do
+      resource :product
+      resources :orders, only: [:index, :show]
+    end
+  end
+
+  resource :customer do
+    resources :orders , except: [:destroy] 
+    resources :shops , only: [:index] do
+      resource :product
+    end
+  end
+
+  resource :courier do
+    resources :orders , only: [:index, :show]
+  end
 end
