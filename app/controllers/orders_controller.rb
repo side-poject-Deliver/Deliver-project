@@ -22,7 +22,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @orders = Order.all
+    @orders = Order.find(params[:id])
   end
 
 private
