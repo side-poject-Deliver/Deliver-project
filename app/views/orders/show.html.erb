@@ -1,8 +1,7 @@
 <h1>訂單明細</h1>
-  <%=@orders.each do |order|%>
-      商店名稱：<%=order.shop%>
-      訂單編號：<%=order.serial%>
-      商品名稱：<%=order.product_name%> 數量：<%=order.quantity%>
-      備註：<%=order.remark%>
-      總金額：<%=order.price%>
-  <%end%>
+  
+      商店名稱：<%=@order.shop%>
+      訂單編號：<%=@order.serial%>
+      商品名稱：<%=@order.product_name%> 數量：<%=@order.quantity%>
+      備註：<%=@order.remark%>
+      總金額：<%=@order.price%>
