@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :shops
+
   resource :owner do
     resources :shops do
       resource :product
