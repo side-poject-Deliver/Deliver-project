@@ -1,0 +1,27 @@
+<%= flash[:notice] %>
+<h1>商店資訊</h1>
+<table>
+  <tr>
+      <td>
+        <%= @shop.title%>
+      </td>
+      <td>
+        <%= @shop.address%>
+      </td>
+      <td>
+        <%= @shop.phone%>
+      </td>
+      <td>
+        <%= @shop.tax_number%>
+      </td>
+      <td>
+        <%= @shop.start_at%>
+      </td>
+      <td>
+        <%= @shop.end_at%>
+      </td>
+  </tr>
+</table>
+
+
+<%= link_to "回商店列表頁" , shops_path%>

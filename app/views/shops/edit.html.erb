@@ -1,0 +1,40 @@
+<%= flash[:notice] %>
+<h1>編輯商店資訊頁面</h1>
+
+<%= form_with model: @shop do |f| %>
+  <div>
+    <%= f.label :title ,'商店名稱'%>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :address ,'商店地址'%>
+    <%= f.text_field :address %>
+  </div>
+
+  <div>
+    <%= f.label :phone ,'商店聯絡電話' %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div>
+    <%= f.label :tax_number ,'商店統編' %>
+    <%= f.text_field :tax_number %>
+  </div>
+
+  <div>
+    <%= f.label :start_at ,'開始營業時間' %>
+    <%= f.datetime_field :start_at %>
+  </div>
+
+  <div>
+    <%= f.label :end_at ,'結束營業時間' %>
+    <%= f.datetime_field :end_at %>
+  </div>
+
+  <div>
+    <%= f.label :tag ,'商店類型' %>
+    <%= f.text_field :tag %>
+  </div>
+  <%= f.submit %>
+<% end %>
