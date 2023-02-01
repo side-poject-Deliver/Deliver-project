@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  address: MyString
+  phone: MyString
+  tax_number: MyString
+  start_at: 2023-02-01 17:35:28
+  end_at: 2023-02-01 17:35:28
+  tag: MyString
+
+two:
+  title: MyString
+  address: MyString
+  phone: MyString
+  tax_number: MyString
+  start_at: 2023-02-01 17:35:28
+  end_at: 2023-02-01 17:35:28
+  tag: MyString
