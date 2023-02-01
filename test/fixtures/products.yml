@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  product_name: MyString
+  quantity: 1
+  delete_at: 2023-01-31 23:43:30
+  note: MyText
+
+two:
+  price: 1
+  product_name: MyString
+  quantity: 1
+  delete_at: 2023-01-31 23:43:30
+  note: MyText

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resource :owner do
     resources :shops do
-      resource :product
+      resources :products
       resources :orders, only: [:index, :show]
     end
   end
@@ -9,11 +9,14 @@ Rails.application.routes.draw do
   resource :customer do
     resources :orders , except: [:destroy] 
     resources :shops , only: [:index] do
-      resource :product
+      resources :products
     end
   end
 
   resource :courier do
     resources :orders , only: [:index, :show]
   end
+
+
+  resources :products
 end
