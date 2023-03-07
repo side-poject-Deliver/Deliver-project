@@ -1,4 +1,4 @@
-<%= form_with(model: @product) do |f| %>
+<%= form_with(model: @product, url: shop_products_path(@shop.id, method: 'post') do |f| %>
   <div> 
     <%= f.label :product_name ,"產品名稱"%>
     <%= f.text_field :product_name %>
@@ -6,7 +6,7 @@
 
   <div> 
     <%= f.label :price ,"價錢"%>
-    <%= f.text_field :price ,min: 1 %>
+    <%= f.text_field :price ,min: 1%>
   </div>
 
   <div> 

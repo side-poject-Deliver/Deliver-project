@@ -16,7 +16,7 @@
     <% @shops.each do |shop| %>
         <tr>
             <td>
-                <%= link_to shop.title, shop_path(shop.id) %>
+                <%= link_to shop.title, shop_products_path(shop.id) %>
             </td>
             <td>
                 <%= shop.address %>
