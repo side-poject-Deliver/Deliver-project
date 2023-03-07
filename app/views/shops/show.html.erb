@@ -1,27 +1,42 @@
 <%= flash[:notice] %>
-<h1>商店資訊</h1>
-<table>
-  <tr>
-      <td>
-        <%= @shop.title%>
-      </td>
-      <td>
-        <%= @shop.address%>
-      </td>
-      <td>
-        <%= @shop.phone%>
-      </td>
-      <td>
-        <%= @shop.tax_number%>
-      </td>
-      <td>
-        <%= @shop.start_at%>
-      </td>
-      <td>
-        <%= @shop.end_at%>
-      </td>
-  </tr>
-</table>
+
+<h1>商品總覽</h1>
+
+<%= link_to "新增商品" , new_shop_product_path(@shop) %>
+
+  <table>
+    <% @products.each do |product|%>
+      <tr>
+        <td>商品名稱</td>
+        <td>商品價錢</td>
+        <td>商品數量</td>
+        <td>編輯商品</td>
+        <td>刪除商品</td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td>
+          <%= product.product_name %>
+        </td>
+        <td>
+          <%= product.price%>
+        </td>
+        <td>
+          <%= product.quantity%>
+        </td>
+        <td>
+          <%= link_to "編輯" , edit_shop_product_path(product) %>
+        </td>
+        <td>
+          <%= link_to "刪除" , shop_product_path(product) ,method:"DELETE" ,data:{confirm: "確認刪除？" }%>
+        </td>
+      </tr>
+
+
+      <% end %>
+  </table>
+
 
 
 <%= link_to "回商店列表頁" , shops_path%>

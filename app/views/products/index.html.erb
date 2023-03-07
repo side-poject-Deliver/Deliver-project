@@ -1,6 +1,6 @@
 <h1>商品總覽</h1>
 
-<%= link_to "新增商品" , new_product_path %>
+<%= link_to "新增商品" , new_shop_product_path %>
 
 <table>
   <% @products.each do |product|%>
@@ -12,12 +12,12 @@
 
     </tr>
     <tr>
-      <td><%= link_to product.product_name, product_path(product) %></td>
+      <td><%= product.product_name %></td>
       <td><%= product.price%></td>
       <td><%= product.quantity%></td>
       <td>
-        <%= link_to "編輯" , edit_product_path(product) %>
-        <%= link_to "刪除" , product_path(product) ,method:"DELETE" ,data:{confirm: "確認刪除？"}%>
+        <%= link_to "編輯" , edit_shop_product_path(product.id) %>
+        <%= link_to "刪除" , shop_product_path(product.id) ,method:"DELETE" ,data:{confirm: "確認刪除？"}%>
       </td>
     </tr>
 

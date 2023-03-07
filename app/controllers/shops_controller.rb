@@ -1,5 +1,6 @@
 class ShopsController < ApplicationController
 before_action :find_shop, only: [:edit, :update, :show, :destroy]
+
   def index
     @shops = Shop.all
   end
@@ -10,7 +11,6 @@ before_action :find_shop, only: [:edit, :update, :show, :destroy]
 
   def create
     @shop = Shop.new(shop_params)
-
     if @shop.save
       redirect_to shops_path, notice: '成功新增商店！'
     else
@@ -19,6 +19,7 @@ before_action :find_shop, only: [:edit, :update, :show, :destroy]
   end
 
   def show
+    @products = Product.all
   end
 
   def edit
@@ -26,7 +27,7 @@ before_action :find_shop, only: [:edit, :update, :show, :destroy]
 
   def update
     if @shop.update(shop_params)
-      redirect_to owner_shop_path, notice: '成功更新商店！'
+      redirect_to shops_path, notice: '成功更新商店！'
     else
       render :edit, alert: '商店資訊更新失敗，請重新確認'
     end
