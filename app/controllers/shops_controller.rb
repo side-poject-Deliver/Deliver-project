@@ -19,7 +19,7 @@ before_action :find_shop, only: [:edit, :update, :show, :destroy]
   end
 
   def show
-    @products = Product.all
+    redirect_to shop_products_path(@shop.id)
   end
 
   def edit

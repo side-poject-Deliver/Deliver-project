@@ -1,6 +1,6 @@
 <h1>商品修改</h1>
 
-<%= form_with(model: @product, url: shop_products_path, method: 'patch') do |f| %>
+<%= form_with(model: @product, url: shop_product_path, method: 'PATCH') do |f| %>
 <div>
 <%= f.label :product_name ,"產品名稱"%>
 <%= f.text_field :product_name %>
